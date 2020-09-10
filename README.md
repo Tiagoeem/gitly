@@ -11,28 +11,38 @@ The problem is that all fency engines that you use on notebooks doesn't run in s
 Just change from dinamic to static using:
 
 ```python
-from plotly_in_github import gitly_show, setup_gitly
+from gitly.colab.plot import GitlyPlotter
 
-setup_gitly('github')
+# Instantiate the object using 'github' or 'git' for static plots
+# or 'colab' for default dinamic Plotly plots
+gitly = GitlyPlotter('github')
 ```
 
-Now just pass the figure from plotly to ```python gitly_show() ``` and it's done!!!
+Now just pass the figure from plotly to ```python gitly.show( fig ) ``` and it's done!!!
 
 ```python
 import plotly.express as px
 
 fig = px.scatter_3d( df, title="Random data")
-gitly_show( fig )
+gitly.show( fig )
 ```
 Now you can commit all your fency plots in github! Congratz!
 
-## Can I use both at the same time? Sure u can!
+## Can I use both at the same time? Sure you can, at any time!
 
-Just use ```python setup_gitly('colab') ``` to switch back in the cell and renderer with default plot from Plotly.
+Just use ```python gitly.switch_renderer('colab') ``` to switch back in the cell and renderer with default plot from Plotly.
 
 ## Check the example here!
 
 <to do>
+
+# Instalation
+
+This lib is intended to be used only on Google Colab notebooks.
+
+Open a cell and run the following code:
+
+```shell !pip install -i https://test.pypi.org/simple/ gitly==0.0.2 ```
 
 
 ## License
