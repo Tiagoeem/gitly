@@ -18,7 +18,7 @@ from gitly.colab.plot import GitlyPlotter
 gitly = GitlyPlotter('github')
 ```
 
-Now just pass the figure from plotly to ```python gitly.show( fig ) ``` and it's done!!!
+Now just pass the figure from plotly to ```gitly.show( fig ) ``` and it's done!!!
 
 ```python
 import plotly.express as px
@@ -30,7 +30,7 @@ Now you can commit all your fency plots in github! Congratz!
 
 ## Can I use both at the same time? Sure you can, at any time!
 
-Just use ```python gitly.switch_renderer('colab') ``` to switch back in the cell and renderer with default plot from Plotly.
+Just use ```gitly.switch_renderer('colab') ``` to switch back in the cell and renderer with default plot from Plotly.
 
 ## Check the example here!
 
@@ -42,7 +42,7 @@ This lib is intended to be used only on Google Colab notebooks.
 
 Open a cell and run the following code:
 
-```shell !pip install -i https://test.pypi.org/simple/ gitly==0.0.2 ```
+```!pip install -i https://test.pypi.org/simple/ gitly==0.0.2 ```
 
 
 ## License
