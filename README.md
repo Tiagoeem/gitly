@@ -19,7 +19,10 @@ setup_gitly('github')
 Now just pass the figure from plotly to ```python gitly_show() ``` and it's done!!!
 
 ```python
-gitly_show('github')
+import plotly.express as px
+
+fig = px.scatter_3d( df, title="Random data")
+gitly_show( fig )
 ```
 Now you can commit all your fency plots in github! Congratz!
 
