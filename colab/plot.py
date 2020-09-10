@@ -29,7 +29,11 @@ print('Done. Have fun! :)')
 
 
 class GitlyPlotter:
+
     static = True
+    default_H = 500
+    default_W = 1000
+    default_S = 1
 
     def __init__ (self, renderer = 'git'):
 
@@ -38,13 +42,24 @@ class GitlyPlotter:
         else:
             self.static = False
 
-    def switch_renderer(self, renderer = 'colab'):
+            self.default_H = 500
+            self.default_W = 1000
+            self.default_S = 1
+
+    def config_render(self, renderer = 'colab', default_height = None, default_width = None, default_scale = None):
         if (renderer == 'colab'):
             self.static = False
         else:
             self.static = True
 
-    def show(self, figure = None ):
+        if not(default_height == None):
+            self.default_H = default_height
+        if not(default_width == None):
+            self.default_W = default_width
+        if not(default_scale == None):
+            self.default_S = default_scale
+
+    def show(self, figure = None, **kwargs ):
         from IPython.display import Image, HTML, display
 
         if figure == None :
@@ -52,7 +67,27 @@ class GitlyPlotter:
 
         try:
             if self.static:
-                img_bytes = figure.to_image('png')
+                if 'width' in kwargs:
+                    w = kwargs.get("width")
+                else: 
+                    w = self.default_W
+
+                if 'height' in kwargs:
+                    h = kwargs.get("height")
+                else: 
+                    h = self.default_H
+
+                if 'scale' in kwargs:
+                    s = kwargs.get("scale")
+                else: 
+                    s = self.default_S
+
+                if 'format' in kwargs:
+                    f = kwargs.get("format")
+                else: 
+                    f = 'png'
+
+                img_bytes = figure.to_image(format=f, width=w, height=h, scale=s)
                 return Image(img_bytes)
             else:
                 return figure.show()
