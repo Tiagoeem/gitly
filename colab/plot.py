@@ -48,7 +48,7 @@ class GitlyPlotter:
         from IPython.display import Image, HTML, display
 
         if figure == None :
-            return display(HTML("<h1>Where's my figure?</h1><br><p>You should pass me the figure from plotly, like: gplt.show( fig )<br>Check <a href=''> this easy example</a>"))
+            return display(HTML('<h1>Where is my figure?</h1><br><p>You should pass me the figure from plotly, like: gplt.show( fig )<br>Check <a href="https://github.com/Tiagoeem/gitly/blob/master/examples/Using_Gitly_Example.ipynb"> this easy example</a>'))
 
         try:
             if self.static:
@@ -59,4 +59,4 @@ class GitlyPlotter:
 
         except:
             print('Error: Are you sure that you send me a valid plotly figure?')
-            print('Please refer: ')
+            print('Please refer: https://github.com/Tiagoeem/gitly')
