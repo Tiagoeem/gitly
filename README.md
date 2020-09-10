@@ -2,7 +2,7 @@
 
 This is a home made lib to help you plot your fency graphs from plotly in github while using Google Colab notebook.
 
-## Nbviewer from Github is static!
+## The problem: Nbviewer from Github is static!
 
 The problem is that all fency engines that you use on notebooks doesn't run in static viewers, of course there's a lot of ways to generate static images in this libraries. But I use Google Colab by a lot in my classes and I would like to have a easy way to switch betweern dinamic plots and statics plots (to commit and share nice plots in github). So I implement this very simple implementation.
 
@@ -34,7 +34,9 @@ Just use ```gitly.switch_renderer('colab') ``` to switch back in the cell and re
 
 ## Check the example here!
 
-<to do>
+You can check that some plots you can see (used "github" view) and others that is used the standard Plotly Engine you only can see if you run this notebook in Google colab.
+
+[Simple Example](https://github.com/Tiagoeem/gitly/blob/master/examples/Using_Gitly_Example.ipynb)
 
 # Instalation
 
@@ -42,7 +44,7 @@ This lib is intended to be used only on Google Colab notebooks.
 
 Open a cell and run the following code:
 
-```!pip install -i https://test.pypi.org/simple/ gitly==0.0.2 ```
+```!pip install -i https://test.pypi.org/simple/ gitly ```
 
 
 ## License
