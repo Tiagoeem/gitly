@@ -46,7 +46,7 @@ This lib is intended to be used only on Google Colab notebooks.
 
 Open a cell and run the following code:
 
-```!pip install -i https://test.pypi.org/simple/ gitly ```
+```!pip install gitly==1.0.1 ```
 
 # Features
 
