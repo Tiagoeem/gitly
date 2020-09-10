@@ -28,7 +28,7 @@ gitly.show( fig )
 ```
 Now you can commit all your fency plots in github! Congratz!
 
-## Can I use both at the same time? Sure you can, at any time!
+## Can I use both in the same Colab notebook? Sure you can!
 
 Just use ```gitly.switch_renderer('colab') ``` to switch back in the cell and renderer with default plot from Plotly.
 
