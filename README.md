@@ -50,7 +50,9 @@ Open a cell and run the following code:
 
 # Features
 
-This features are only for static plots, you aare able to set a default values for **hight**, **width** and **scale** for all your plots.
+This features are only for static plots.
+## Change the defaults
+You are able to set a default values for **hight**, **width** and **scale** for all your plots.
 
 ```python
 gitly.config_render('git', default_height = 600, default_width = 1000) # set default values for all gitly.show()
@@ -67,8 +69,8 @@ gitly.config_render('git', scale = 0.5) # set default scale for all gitly.show()
 fig = px.scatter_3d( df, title="Random data")
 gitly.show( fig )
 ```
-
-Or apply an specific change only to one plot while calling ```.show``` with more arguments:
+## Apply change for a specific plot
+Or apply an specific change only to one plot while calling ```.show()``` with more arguments:
 
 ```python
 fig = px.scatter_3d( df, title="Random data")
