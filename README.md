@@ -1,3 +1,5 @@
+![Image of gitly](https://raw.githubusercontent.com/Tiagoeem/gitly/master/doc/ico.PNG)
+   
 # gitly: Showing plotly graphs in github
 
 This is a home made lib to help you plot your fency graphs from plotly in github while using Google Colab notebook.
@@ -30,7 +32,7 @@ Now you can commit all your fency plots in github! Congratz!
 
 ## Can I use both in the same Colab notebook? Sure you can!
 
-Just use ```gitly.switch_renderer('colab') ``` to switch back in the cell and renderer with default plot from Plotly.
+Just use ```gitly.config_render('colab') ``` to switch back in the cell and renderer with default plot from Plotly.
 
 ## Check the example here!
 
@@ -46,6 +48,33 @@ Open a cell and run the following code:
 
 ```!pip install -i https://test.pypi.org/simple/ gitly ```
 
+# Features
+
+This features are only for static plots, you aare able to set a default values for **hight**, **width** and **scale** for all your plots.
+
+```python
+gitly.config_render('git', default_height = 600, default_width = 1000) # set default values for all gitly.show()
+
+fig = px.scatter_3d( df, title="Random data")
+gitly.show( fig )
+```
+
+Change the **scale** where ever you want, and all plots after will scale up or down:
+
+```python
+gitly.config_render('git', scale = 0.5) # set default scale for all gitly.show()
+
+fig = px.scatter_3d( df, title="Random data")
+gitly.show( fig )
+```
+
+Or apply an specific change only to one plot while calling ```.show``` with more arguments:
+
+```python
+fig = px.scatter_3d( df, title="Random data")
+gitly.show( fig, height = 333, width = 777, scale = 1.5 ) # this change will be applied only for this plot
+```
+For more, check this [example](https://github.com/Tiagoeem/gitly/blob/master/examples/Using_Gitly_Example.ipynb)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
