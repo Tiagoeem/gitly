@@ -34,7 +34,7 @@ Now you can commit all your fency plots in github! Congratz!
 
 Just use ```gitly.config_render('colab') ``` to switch back in the cell and renderer with default plot from Plotly.
 
-## Check the example here!
+# Example here!
 
 You can check that some plots you can see (used "github" view) and others that is used the standard Plotly Engine you only can see if you run this notebook in Google colab.
 
@@ -78,7 +78,7 @@ gitly.show( fig, height = 333, width = 777, scale = 1.5 ) # this change will be 
 ```
 For more, check this [example](https://github.com/Tiagoeem/gitly/blob/master/examples/Using_Gitly_Example.ipynb)
 
-## License
+# License
 [MIT](https://choosealicense.com/licenses/mit/)
 
 Created without pretensions by Tiago Sanches da Silva.
